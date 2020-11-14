@@ -61,7 +61,7 @@ Options:
                                   [required]
   -o, --output TEXT               the output name
   --debug                         [default: False]
-  --all-style                     apply all styles to the image  [default:
+  --all-styles                     apply all styles to the image  [default:
                                   False]
 
   --version                       Show the version and exit.

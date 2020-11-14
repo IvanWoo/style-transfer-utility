@@ -19,9 +19,9 @@ click.option = partial(click.option, show_default=True)
 )
 @click.option("-o", "--output", help="the output name")
 @click.option("--debug", is_flag=True)
-@click.option("--all-style", is_flag=True, help="apply all styles to the image")
+@click.option("--all-styles", is_flag=True, help="apply all styles to the image")
 @click.version_option()
-def main(input_path, style, output, debug, all_style):
+def main(input_path, style, output, debug, all_styles):
     """
     \b
     style-transfer-utility: stu
@@ -42,7 +42,7 @@ def main(input_path, style, output, debug, all_style):
     except ValueError as e:
         print(e)
         image = imageio.imread(input_path)
-        if all_style:
+        if all_styles:
             for style in STYLES.keys():
                 create_styled_images([image], style, prefix)
         else:
